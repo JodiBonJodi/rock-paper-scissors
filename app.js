@@ -3,7 +3,6 @@ import checkResult from './check-result.js';
 
 const gameButton = document.getElementById('game-button');
 const resetButton = document.getElementById('reset-button');
-// const summary = document.getElementById('summary');
 const yourGuess = document.getElementById('your-guess');
 const computerGeneratedGuess = document.getElementById('computer-guess');
 const whoWon = document.getElementById('who-won');
@@ -13,7 +12,6 @@ const howManyDraws = document.getElementById('count-draws');
 
 
 //set initial state
-// let correctGuess = 0;
 let countWin = 0;
 let countLoss = 0;
 let countDraw = 0;
@@ -70,8 +68,6 @@ const playGame = () => {
 };
 
 
-
-// const result = checkResult(userSelection, computerGuess);
-
+//buttons and event listeners
 gameButton.addEventListener('click', playGame);
 resetButton.addEventListener('click', hardReset);
