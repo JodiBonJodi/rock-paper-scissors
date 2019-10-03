@@ -6,7 +6,7 @@ const resetButton = document.getElementById('reset-button');
 // const summary = document.getElementById('summary');
 const yourGuess = document.getElementById('your-guess');
 const computerGeneratedGuess = document.getElementById('computer-guess');
-const whoWon = document.getElementById('who won');
+const whoWon = document.getElementById('who-won');
 const howManyWins = document.getElementById('count-win');
 const howManyLosses = document.getElementById('count-loss');
 const howManyDraws = document.getElementById('count-draws');
@@ -27,12 +27,14 @@ const hardReset = () => {
     countLoss = 0;
     console.log(countWin, countLoss, countDraw);
     updateSpans();
+
 };
 
 const updateSpans = () => {
     howManyDraws.textContent = countDraw        
     howManyWins.textContent = countWin;
     howManyLosses.textContent = countLoss;
+    whoWon.classList.add('hidden');
 };
 
 const playGame = () => {
@@ -46,17 +48,21 @@ const playGame = () => {
 
 
     if (didYouWin === 0) {
+        whoWon.classList.remove("hidden");
         whoWon.textContent = 'It\'s a draw!';
         countDraw++;
-        howManyDraws.textContent = countDraw        
+        howManyDraws.textContent = countDraw
     } else if (didYouWin === 1) {
+        whoWon.classList.remove("hidden");
         whoWon.textContent = 'You win!';
         countWin++;
         howManyWins.textContent = countWin;
     } else if (didYouWin === -1) {
+        whoWon.classList.remove("hidden");
         whoWon.textContent = 'You lost!';
         countLoss++;
-        howManyLosses.textContent = countLoss;
+        howManyLosses.textContent = countLoss;       
+
     }
 
     yourGuess.textContent = userSelection.toUpperCase();
