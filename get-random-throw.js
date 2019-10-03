@@ -1,13 +1,13 @@
-const getRandomThrow = (computerGeneratedGuess) => {
+const getRandomThrow = () => {
     let computerSelection = Math.floor(Math.random() * 3) + 1;
 
 
     if (computerSelection === 1) {
-        computerGeneratedGuess.textContent = 'ROCK';
+        return 'ROCK';
     } else if (computerSelection === 2) {
-        computerGeneratedGuess.textContent = 'PAPER';
+        return 'PAPER';
     } else if (computerSelection === 3) {
-        computerGeneratedGuess.textContent = 'SCISSORS';
+        return 'SCISSORS';
     }
 };
 

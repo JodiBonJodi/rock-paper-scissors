@@ -21,14 +21,18 @@
     </section>
 
     <section class="coins">
-        <label>Rock<input name="game" value="rock" type="radio" checked /></label>
-        <label>Paper<input name="game" value="paper" type="radio" /></label>
-        <label>Scissors<input name="game" value="scissors" type="radio" /></label>
+        <label>ROCK<input name="game" value="rock" type="radio" checked /></label>
+        <label>PAPER<input name="game" value="paper" type="radio" /></label>
+        <label>SCISSORS<input name="game" value="scissors" type="radio" /></label>
     </section>
     <button id="game-button">GO!</button>
     <section id="summary" class="hidden">You chose: <span id="your-guess"></span></section>
     <section id="summary" class="hidden">The computer chose: <span id="computer-guess"></span></section>
-    <section id="summary" class="hidden"><span></span>wins!</section>
+    <section id="summary" class="hidden"><span id="who won"></span></section>
+    <section id="summary" class="hidden">How many wins: <span id="count-win"></span></section>
+    <section id="summary" class="hidden">How many losses: <span id="count-loss"></span></section>
+    <section id="summary" class="hidden">How many draws: <span id="count-draws"></span></section>
+
     <button id="reset-button">Reset Game</button>
 
 
