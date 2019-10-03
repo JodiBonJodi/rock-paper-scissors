@@ -1,3 +1,76 @@
-/* .hidden {
-    display: none;
-} */
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    color: #60b7b8;
+    background-color: #4a4a4a;
+    font-size: 20px;
+}
+
+#summary {
+    margin-bottom: 10px;
+}
+
+.rock {
+    
+}
+
+input {
+    margin: 20px;
+}
+
+button {
+    margin: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+button.game-button {
+    width: 90px;
+    height: 40px;
+    background-color: #60b7b8;
+    color: #4a4a4a;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+button.reset-button {
+    width: 100px;
+    height: 40px;
+    background-color: #60b7b8;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center
+}
+
+.intro {
+    width: 500px;
+}
+
+ .how-many {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: space-around; 
+}
+
+.results {
+    margin: 40px;
+}
+
+.choice-output-and-win {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.who-won {
+    font-size: 40px;  
+}

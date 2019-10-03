@@ -6,34 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
     <section class="intro">
         <h1>ROCK | PAPER | SCISSORS</h1>
-        <h4>Rock paper scissors is a game of chance that can be played with simply your hands. Let's make it more complicated and play against a computer. Each turn, just pick either rock, paper, or sciessors. The computer will pick one as well. Based on the rules below, we will define a winner.</h4>
-        <ul>
-            <li>Rock beats scissors</li>
-            <li>Scissors beats paper</li>
-            <li>Paper beats rock</li>
+        <h4>Rock paper scissors is a game of chance that can be played with simply your hands. Let's make it more complicated and play against a computer. Each turn, just pick either rock, paper, or sciessors. The computer will pick one as well. Based on the following rules, we will define a winner. Rock beats scissors, scissors beats paper, paper beats rock.</h4>
+       
         </ul>
     </section>
 
-    <section class="coins">
+    <section class="choices">
         <label>ROCK<input name="game" value="rock" type="radio" checked /></label>
         <label>PAPER<input name="game" value="paper" type="radio" /></label>
         <label>SCISSORS<input name="game" value="scissors" type="radio" /></label>
-    </section>
-    <button id="game-button">GO!</button>
-    <section id="summary" class="hidden">You chose: <span id="your-guess"></span></section>
-    <section id="summary" class="hidden">The computer chose: <span id="computer-guess"></span></section>
-    <section id="summary" class="hidden"><span id="who won"></span></section>
-    <section id="summary" class="hidden">How many wins: <span id="count-win"></span></section>
-    <section id="summary" class="hidden">How many losses: <span id="count-loss"></span></section>
-    <section id="summary" class="hidden">How many draws: <span id="count-draws"></span></section>
+        <button class="game-button" id="game-button">Play</button>
+        <button class="reset-button" id="reset-button">Reset Game</button>
 
-    <button id="reset-button">Reset Game</button>
+    </section>
+
+    <section class="choice-output-and-win">
+        
+        <section>You chose: <span id="your-guess"></span></section>
+        <section>The computer chose: <span id="computer-guess"></span></section><br>
+        <section class="who-won"><span id="who won"></span></section>
+    </section>
+
+    <section class="how-many">
+        <section class="results">How many wins: <span id="count-win"></span></section>
+        <section class="results">How many losses: <span id="count-loss"></span></section>
+        <section class="results">How many draws: <span id="count-draws"></span></section>
+    </section>
+
 
 
     <script type="module" src="app.js"></script>

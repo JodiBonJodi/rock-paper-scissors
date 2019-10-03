@@ -3,7 +3,7 @@ import checkResult from './check-result.js';
 
 const gameButton = document.getElementById('game-button');
 const resetButton = document.getElementById('reset-button');
-const summary = document.getElementById('summary');
+// const summary = document.getElementById('summary');
 const yourGuess = document.getElementById('your-guess');
 const computerGeneratedGuess = document.getElementById('computer-guess');
 const whoWon = document.getElementById('who won');
