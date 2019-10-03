@@ -1,1 +1,1 @@
-import './get-throw.test.js';
+import './check-result.test.js';
