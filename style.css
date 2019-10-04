@@ -24,12 +24,6 @@ button {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
-
-}
-
-button.game-button {
-    width: 90px;
-    height: 40px;
     background-color: #60b7b8;
     color: #4a4a4a;
     font-size: 30px;
@@ -37,14 +31,23 @@ button.game-button {
     text-align: center;
 }
 
+button:focus {
+    outline-width: 0px;
+}
+
+button.game-button {
+    width: 90px;
+    height: 40px;
+    
+}
+
 button.reset-button {
     width: 100px;
     height: 40px;
-    background-color: #60b7b8;
-    color: #4a4a4a;
-    margin-bottom: 30px;
-    font-size: 30px;
-    text-align: center
+}
+
+button.launch {
+    outline-color: #60b7b8; 
 }
 
 .intro {
