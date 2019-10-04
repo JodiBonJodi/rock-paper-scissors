@@ -15,7 +15,7 @@ const howManyDraws = document.getElementById('count-draws');
 let countWin = 0;
 let countLoss = 0;
 let countDraw = 0;
-let userSelection;
+// let userSelection;
 
 
 //define DOM utility
@@ -29,7 +29,7 @@ const hardReset = () => {
 };
 
 const updateSpans = () => {
-    howManyDraws.textContent = countDraw        
+    howManyDraws.textContent = countDraw;        
     howManyWins.textContent = countWin;
     howManyLosses.textContent = countLoss;
     whoWon.classList.add('hidden');
@@ -38,25 +38,22 @@ const updateSpans = () => {
 const playGame = () => {
     const selectedRadioButton = document.querySelector('input:checked');
     const userSelection = selectedRadioButton.value;
-    console.log(userSelection, 'user guess');
-    const randomThrow =  getRandomThrow(); 
-    console.log(randomThrow, 'computer guess');
+    const randomThrow = getRandomThrow(); 
     const didYouWin = checkResult(userSelection, randomThrow);
-    console.log(didYouWin);
 
 
     if (didYouWin === 0) {
-        whoWon.classList.remove("hidden");
+        whoWon.classList.remove('hidden');
         whoWon.textContent = 'It\'s a draw!';
         countDraw++;
-        howManyDraws.textContent = countDraw
+        howManyDraws.textContent = countDraw;
     } else if (didYouWin === 1) {
-        whoWon.classList.remove("hidden");
+        whoWon.classList.remove('hidden');
         whoWon.textContent = 'You win!';
         countWin++;
         howManyWins.textContent = countWin;
     } else if (didYouWin === -1) {
-        whoWon.classList.remove("hidden");
+        whoWon.classList.remove('hidden');
         whoWon.textContent = 'You lost!';
         countLoss++;
         howManyLosses.textContent = countLoss;       
