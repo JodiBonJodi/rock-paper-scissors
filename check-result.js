@@ -1,6 +1,3 @@
-
-
-
 const checkResult = (userSelection, computerGuess) => {
 
     if (userSelection === 'rock' && computerGuess === 'ROCK') {

@@ -10,22 +10,17 @@ const howManyWins = document.getElementById('count-win');
 const howManyLosses = document.getElementById('count-loss');
 const howManyDraws = document.getElementById('count-draws');
 
-
 //set initial state
 let countWin = 0;
 let countLoss = 0;
 let countDraw = 0;
-// let userSelection;
-
 
 //define DOM utility
 const hardReset = () => {
     countDraw = 0;
     countWin = 0;
     countLoss = 0;
-    console.log(countWin, countLoss, countDraw);
     updateSpans();
-
 };
 
 const updateSpans = () => {
@@ -57,7 +52,6 @@ const playGame = () => {
         whoWon.textContent = 'You lost!';
         countLoss++;
         howManyLosses.textContent = countLoss;       
-
     }
 
     yourGuess.textContent = userSelection.toUpperCase();
