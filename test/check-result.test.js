@@ -1,123 +1,100 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
 
-import checkResult from '../check-result.js'
+import checkResult from '../check-result.js';
 
 
 const test = QUnit.test;
 
-test('will return 1 if users input is rock and computer input is scissors', function(assert) {
+test('will return win if users input is rock and computer input is scissors', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const userSelection = 'rock';
-    const computerGuess = 'SCISSORS';
+    const computerGuess = 'scissors';
    
     //Act 
     // Call the function you're testing and set the result to a const
     const result = checkResult(userSelection, computerGuess);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 1);
+    assert.equal(result, 'win');
 });
 
-test('will return 1 if users input is paper and computer input is rock', function(assert) {
+test('will return win if users input is paper and computer input is rock', function(assert) {
      //Arrange
     // Set up your parameters and expectations
     const userSelection = 'paper';
-    const computerGuess = 'ROCK';
+    const computerGuess = 'rock';
     //Act 
     // Call the function you're testing and set the result to a const
     const result = checkResult(userSelection, computerGuess);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 1);
+    assert.equal(result, 'win');
 });
 
-test('will return 1 if users input is scissors and computer input is paper', function(assert) {
+test('will return win if users input is scissors and computer input is paper', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const userSelection = 'scissors';
-    const computerGuess = 'PAPER';
+    const computerGuess = 'paper';
     //Act 
     // Call the function you're testing and set the result to a const
     const result = checkResult(userSelection, computerGuess);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 1);
+    assert.equal(result, 'win');
 });
 
-test('will return 0 if users input is rock and computer input is rock', function(assert) {
+test('will return draw if users input equals computer input', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const userSelection = 'rock';
-    const computerGuess = 'ROCK';
+    const computerGuess = 'rock';
     //Act 
     // Call the function you're testing and set the result to a const
     const result = checkResult(userSelection, computerGuess);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, 0);
-});
-test('will return 0 if users input is scissors and computer input is scissors', function(assert) {
-     //Arrange
-    // Set up your parameters and expectations
-    const userSelection = 'scissors';
-    const computerGuess = 'SCISSORS';
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const result = checkResult(userSelection, computerGuess);
-    //Assert
-    // Make assertions about what is expected valid result
-    assert.equal(result, 0);
-});
-test('will return 0 if users input is paper and computer input is paper', function(assert) {
-       //Arrange
-    // Set up your parameters and expectations
-    const userSelection = 'paper';
-    const computerGuess = 'PAPER';
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const result = checkResult(userSelection, computerGuess);
-    //Assert
-    // Make assertions about what is expected valid result
-    assert.equal(result, 0);
+    assert.equal(result, 'draw');
 });
 
-test('will return -1 if users input is rock and computer input is paper', function(assert) {
+
+test('will return loss if users input is rock and computer input is paper', function(assert) {
      //Arrange
     // Set up your parameters and expectations
     const userSelection = 'rock';
-    const computerGuess = 'PAPER';
+    const computerGuess = 'paper';
     //Act 
     // Call the function you're testing and set the result to a const
     const result = checkResult(userSelection, computerGuess);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, -1);
+    assert.equal(result, 'loss');
 });
 
-test('will return -1 if users input is scissors and computer input is rock', function(assert) {
+test('will return loss if users input is scissors and computer input is rock', function(assert) {
         //Arrange
     // Set up your parameters and expectations
     const userSelection = 'scissors';
-    const computerGuess = 'ROCK';
+    const computerGuess = 'rock';
     //Act 
     // Call the function you're testing and set the result to a const
     const result = checkResult(userSelection, computerGuess);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, -1);
+    assert.equal(result, 'loss');
 });
 
-test('will return -1 if users input is paper and computer input is scissors', function(assert) {
+test('will return loss if users input is paper and computer input is scissors', function(assert) {
        //Arrange
     // Set up your parameters and expectations
     const userSelection = 'paper';
-    const computerGuess = 'SCISSORS';
+    const computerGuess = 'scissors';
     //Act 
     // Call the function you're testing and set the result to a const
     const result = checkResult(userSelection, computerGuess);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(result, -1);
+    assert.equal(result, 'loss');
 });

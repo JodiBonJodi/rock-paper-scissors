@@ -3,11 +3,11 @@ const getRandomThrow = () => {
 
 
     if (computerSelection === 1) {
-        return 'ROCK';
+        return 'rock';
     } else if (computerSelection === 2) {
-        return 'PAPER';
+        return 'paper';
     } else if (computerSelection === 3) {
-        return 'SCISSORS';
+        return 'scissors';
     }
 };
 

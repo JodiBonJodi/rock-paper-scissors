@@ -15,21 +15,18 @@ const howManyDraws = document.getElementById('count-draws');
 let countWin = 0;
 let countLoss = 0;
 let countDraw = 0;
-let userSelection;
-
 
 //define DOM utility
 const hardReset = () => {
     countDraw = 0;
     countWin = 0;
     countLoss = 0;
-    console.log(countWin, countLoss, countDraw);
     updateSpans();
 
 };
 
 const updateSpans = () => {
-    howManyDraws.textContent = countDraw        
+    howManyDraws.textContent = countDraw;        
     howManyWins.textContent = countWin;
     howManyLosses.textContent = countLoss;
     whoWon.classList.add('hidden');
@@ -38,33 +35,29 @@ const updateSpans = () => {
 const playGame = () => {
     const selectedRadioButton = document.querySelector('input:checked');
     const userSelection = selectedRadioButton.value;
-    console.log(userSelection, 'user guess');
-    const randomThrow =  getRandomThrow(); 
-    console.log(randomThrow, 'computer guess');
+    const randomThrow = getRandomThrow(); 
     const didYouWin = checkResult(userSelection, randomThrow);
-    console.log(didYouWin);
 
 
-    if (didYouWin === 0) {
-        whoWon.classList.remove("hidden");
+    if (didYouWin === 'draw') {
+        whoWon.classList.remove('hidden');
         whoWon.textContent = 'It\'s a draw!';
         countDraw++;
-        howManyDraws.textContent = countDraw
-    } else if (didYouWin === 1) {
-        whoWon.classList.remove("hidden");
+        howManyDraws.textContent = countDraw;
+    } else if (didYouWin === 'win') {
+        whoWon.classList.remove('hidden');
         whoWon.textContent = 'You win!';
         countWin++;
         howManyWins.textContent = countWin;
-    } else if (didYouWin === -1) {
-        whoWon.classList.remove("hidden");
+    } else if (didYouWin === 'loss') {
+        whoWon.classList.remove('hidden');
         whoWon.textContent = 'You lost!';
         countLoss++;
         howManyLosses.textContent = countLoss;       
-
     }
 
     yourGuess.textContent = userSelection.toUpperCase();
-    computerGeneratedGuess.textContent = randomThrow;
+    computerGeneratedGuess.textContent = randomThrow.toUpperCase();
 };
 
 
