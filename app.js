@@ -10,7 +10,6 @@ const howManyWins = document.getElementById('count-win');
 const howManyLosses = document.getElementById('count-loss');
 const howManyDraws = document.getElementById('count-draws');
 
-
 //set initial state
 let countWin = 0;
 let countLoss = 0;
@@ -22,7 +21,6 @@ const hardReset = () => {
     countWin = 0;
     countLoss = 0;
     updateSpans();
-
 };
 
 const updateSpans = () => {
@@ -38,7 +36,6 @@ const playGame = () => {
     const randomThrow = getRandomThrow(); 
     const didYouWin = checkResult(userSelection, randomThrow);
 
-
     if (didYouWin === 'draw') {
         whoWon.classList.remove('hidden');
         whoWon.textContent = 'It\'s a draw!';
@@ -49,6 +46,7 @@ const playGame = () => {
         whoWon.textContent = 'You win!';
         countWin++;
         howManyWins.textContent = countWin;
+
     } else if (didYouWin === 'loss') {
         whoWon.classList.remove('hidden');
         whoWon.textContent = 'You lost!';
