@@ -36,18 +36,18 @@ const playGame = () => {
     const randomThrow = getRandomThrow(); 
     const didYouWin = checkResult(userSelection, randomThrow);
 
-
-    if (didYouWin === 0) {
+    if (didYouWin === 'draw') {
         whoWon.classList.remove('hidden');
         whoWon.textContent = 'It\'s a draw!';
         countDraw++;
         howManyDraws.textContent = countDraw;
-    } else if (didYouWin === 1) {
+    } else if (didYouWin === 'win') {
         whoWon.classList.remove('hidden');
         whoWon.textContent = 'You win!';
         countWin++;
         howManyWins.textContent = countWin;
-    } else if (didYouWin === -1) {
+
+    } else if (didYouWin === 'loss') {
         whoWon.classList.remove('hidden');
         whoWon.textContent = 'You lost!';
         countLoss++;
@@ -55,7 +55,7 @@ const playGame = () => {
     }
 
     yourGuess.textContent = userSelection.toUpperCase();
-    computerGeneratedGuess.textContent = randomThrow;
+    computerGeneratedGuess.textContent = randomThrow.toUpperCase();
 };
 
 
